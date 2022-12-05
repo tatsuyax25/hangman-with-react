@@ -22,7 +22,11 @@ const LEFT_LEG = (
     <div style={{ width: "100px", height: "10px", background: "black", position: "absolute", top: "210px", right: 0, rotate: "-60deg", transformOrigin: "right bottom" }} />
 )
 
-export function HangmanDrawing() {
+type HangmanDrawingProps = {
+    numberOfGuesses: number
+}
+
+export function HangmanDrawing({ numberOfGuesses }: HangmanDrawingProps) {
     return <div style={{ position: "relative" }}>
         {HEAD}
         {BODY}
